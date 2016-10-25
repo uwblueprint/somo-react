@@ -1,0 +1,50 @@
+{
+  "name": "somo-react",
+  "version": "1.0.0",
+  "description": "Front-end for the Somo project. Allows users to create, edit and send surveys using SMS.",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --progress --colors --watch",
+    "test": "mocha --compilers js:babel-register --recursive test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwblueprint/somo-react.git"
+  },
+  "author": "UW Blueprint",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/uwblueprint/somo-react/issues"
+  },
+  "homepage": "https://github.com/uwblueprint/somo-react#readme",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "radium": "^0.18.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-pure-render": "^1.0.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "expect": "^1.20.2",
+    "mocha": "^3.1.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

@@ -1,9 +1,10 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: './src/App.jsx',
   output: {
-    path: __dirname + '/build',
+    path: path.join(__dirname, '/build'),
     publicPath: '/assets',
     filename: 'bundle.js',
   },
@@ -21,7 +22,7 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
       },
-    ]
+    ],
   },
   eslint: {
     emitWarning: true,
@@ -30,6 +31,6 @@ module.exports = {
     failOnError: true,
   },
   devServer: {
-    contentBase: __dirname + '/src',
+    contentBase: path.join(__dirname, '/src'),
   },
-}
+};

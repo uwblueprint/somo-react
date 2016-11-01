@@ -21,16 +21,17 @@ test/
 ```
 
 ### Tools/Plugins
-* [Webpack](https://webpack.github.io/)
-* [ES6](https://babeljs.io/docs/learn-es2015/)
-* [Babel](https://babeljs.io/)
-* [React](https://facebook.github.io/react/)
-* [Redux](http://redux.js.org/)
+* [Webpack](https://webpack.github.io)
+* [ES6](https://babeljs.io/docs/learn-es2015)
+* [Babel](https://babeljs.io)
+* [React](https://facebook.github.io/react)
+* [Redux](http://redux.js.org)
 * [react-redux](https://github.com/reactjs/react-redux)
 * [react-router](https://github.com/ReactTraining/react-router)
 * [immutable-js](https://facebook.github.io/immutable-js)
-* [Mocha](https://mochajs.org/)
-* [expect](https://github.com/mjackson/expect)
+* [Mocha](https://mochajs.org)
+* [Chai](http://chaijs.com)
+
 
 ### Useful Resources
 * [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)

@@ -42,7 +42,9 @@
 5. Comments
   * Use `// This is a comment.` instead of `/* This is a comment. */`.
   * They must have correct grammer and sentence structure.
-6. Use ES6 over ES5 when possible.
+6. Strings
+  * Use single quotes instead of double quotes.
+7. Use ES6 over ES5 when possible.
 
 
 ### Contributing Guidelines

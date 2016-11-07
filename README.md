@@ -52,7 +52,8 @@
 * Assign yourself to the issue.
 * Create a new branch and work on the issue.
 * Push your branch to Github and make a PR to merge with master.
-* After code review, squash the commits and merge into master.
+* After code review and approval, squash the commits and merge into master.
+* Delete the branch created for the issue.
 
 ### Tools/Plugins
 * [NodeJS](https://nodejs.org)

@@ -7,6 +7,7 @@
 2. `npm install` to install all the dependencies.
 3. `npm run start` to start the app on [localhost](http://localhost:8080/).
 4. `npm run test` to run tests in the `test` folder.
+5. `npm run lint` to run the linter on `webpack.config.js`, `src`, and `test` folder.
 
 ### Directory Structure
 ```

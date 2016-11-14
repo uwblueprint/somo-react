@@ -1,12 +1,34 @@
-import React from 'react';
+import Immutable from 'immutable';
+import React, { PropTypes } from 'react';
 import PureComponent from 'react-pure-render/component';
+import { connect } from 'react-redux';
 
-import AllSurveysPage from '../components/AllSurveysPage.jsx';
+import { fetchSurveysMetadata } from 'actions';
+import AllSurveysPage from 'components/AllSurveysPage';
+import { getSentSurveysMetadata, getUnsentSurveysMetadata } from 'selectors';
 
-export default class AllSurveysContainer extends PureComponent {
+class AllSurveysContainer extends PureComponent {
+  static propTypes = {
+    sentSurveys: PropTypes.instanceOf(Immutable.Map).isRequired,
+    unsentSurveys: PropTypes.instanceOf(Immutable.Map).isRequired,
+    fetchSurveysMetadata: PropTypes.func.isRequired,
+  };
+
   render() {
     return (
-      <AllSurveysPage />
+      <AllSurveysPage {...this.props} />
     );
   }
 }
+
+const mapStateToProps = state => ({
+  sentSurveys: getSentSurveysMetadata(state),
+  unsentSurveys: getUnsentSurveysMetadata(state),
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchSurveysMetadata: () => dispatch(fetchSurveysMetadata()),
+});
+
+export default AllSurveysContainer =
+    connect(mapStateToProps, mapDispatchToProps)(AllSurveysContainer);

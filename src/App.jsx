@@ -1,29 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PureComponent from 'react-pure-render/component';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import AppStructure from './components/AppStructure.jsx';
-import PageNotFound from './components/PageNotFound.jsx';
-import AllSurveysContainer from './containers/AllSurveysContainer.jsx';
-import LoginContainer from './containers/LoginContainer.jsx';
-import SelectedSurveyContainer from './containers/SelectedSurveyContainer.jsx';
+import AppStructure from 'components/AppStructure';
+import PageNotFound from 'components/PageNotFound';
+import AllSurveysContainer from 'containers/AllSurveysContainer';
+import LoginContainer from 'containers/LoginContainer';
+import SelectedSurveyContainer from 'containers/SelectedSurveyContainer';
+import { ALL_SURVEYS_PAGE } from 'constants';
+import { store } from 'store';
 
-class App extends PureComponent {
+export default class App extends PureComponent {
   render() {
     return (
-      <Router history={hashHistory}>
-        <Route path="/" component={AppStructure}>
-          <IndexRoute component={LoginContainer} />
-          <Route path="surveys">
-            <IndexRoute component={AllSurveysContainer} />
-            <Route path=":id" component={SelectedSurveyContainer} />
+      <Provider store={store}>
+        <Router history={browserHistory}>
+          <Route path="/" component={AppStructure}>
+            <IndexRoute component={LoginContainer} />
+            <Route path={ALL_SURVEYS_PAGE}>
+              <IndexRoute component={AllSurveysContainer} />
+              <Route path=":id" component={SelectedSurveyContainer} />
+            </Route>
+            <Route path="*" component={PageNotFound} />
           </Route>
-          <Route path="*" component={PageNotFound} />
-        </Route>
-      </Router>
+        </Router>
+      </Provider>
     );
   }
 }
-
-ReactDOM.render(<App />, document.getElementById('app'));

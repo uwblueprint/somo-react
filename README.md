@@ -19,11 +19,14 @@
 │   ├── containers/     # React components that interact with Redux
 │   ├── selectors/      # utility functions that select certain sections of the Redux state
 │   ├── reducers/       # Redux reducers that handle updating state
-│   ├── App.jsx         # injects the root component into the HTML page
+│   ├── App.jsx         # root React component that sets up the routes and redux
+│   └── store.js        # configures the redux store with middlewares and reducers
+│   └── utils.js        # utility functions that get used across the app
+│   └── index.js        # injects the root component into the HTML page
 │   └── index.html      # HTML page that gets served
 ├── test/               # mocha tests
 ├── webpack.config.js   # Webpack config
-├── package.json        # App dependencies and metadata
+├── package.json        # app dependencies and metadata
 └── README.md
 ```
 
@@ -37,8 +40,8 @@
 3. Line length
   * The maximum characters per line should be 100.
 4. Imports
-  * Separate the plugin class/function imports from our class/function imports from other language imports using 1 line.
-  * Then order them by the module name.
+  * Separate the plugin imports from our class/function imports from other language (i.e. JSON) imports using 1 line.
+  * An import must be on 1 line, even if it is longer than 100 characters.
   * See [here](src/App.jsx) for example.
 5. Comments
   * Use `// This is a comment.` instead of `/* This is a comment. */`.

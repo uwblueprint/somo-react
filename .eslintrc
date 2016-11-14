@@ -4,12 +4,33 @@
   "rules": {
     "jsx-a11y/no-static-element-interactions": 0,
     "react/forbid-prop-types": 0,
+    "react/no-unused-prop-types": 0,
     "react/prefer-stateless-function": 0,
     "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": ["error", {
+      devDependencies: [
+        "test/**",
+        "webpack.config.js",
+        "webpack.config.test.js",
+      ],
+      optionalDependencies: false,
+    }],
+    "new-cap": 0,
     "no-undef": 0,
     "no-console": 0,
     "no-plusplus": 0,
     "no-continue": 0,
-    "no-use-before-define": 0
-  }
+    "no-class-assign": 0,
+    "no-fallthrough": 0,
+    "no-unused-vars": 0,
+    "no-use-before-define": 0,
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.test.js",
+      },
+    },
+  },
 }

@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 import PureComponent from 'react-pure-render/component';
 
-import Footer from './Footer.jsx';
-import Header from './Header.jsx';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
 
 export default class AppStructure extends PureComponent {
   static propTypes = {
-    children: PropTypes.object,
+    children: PropTypes.object.isRequired,
   }
 
   render() {

@@ -2,9 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './src/App.jsx',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './src/index.js',
+  ],
   output: {
-    path: path.join(__dirname, '/build'),
+    path: path.join(__dirname, 'build'),
     publicPath: '/assets',
     filename: 'bundle.js',
   },
@@ -22,7 +27,15 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
       },
+      {
+        test: /.json$/,
+        loader: 'json',
+      },
     ],
+  },
+  resolve: {
+    root: path.join(__dirname, 'src'),
+    extensions: ['', '.js', '.jsx'],
   },
   eslint: {
     emitWarning: true,
@@ -31,6 +44,13 @@ module.exports = {
     failOnError: true,
   },
   devServer: {
-    contentBase: path.join(__dirname, '/src'),
+    contentBase: path.join(__dirname, 'src'),
+    colors: true,
+    hot: true,
+    inline: false,
+    historyApiFallback: true,
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };

@@ -11,14 +11,17 @@
         "options": [
           {
             "key": "A",
+            "text": "This is option a",
             "next_question_to_ask": 2
           },
           {
             "key": "B",
+            "text": "This is option b",
             "next_question_to_ask": 3
           },
           {
             "key": "C",
+            "text": "This is option c",
             "next_question_to_ask": 4
           }
         ]
@@ -29,14 +32,12 @@
         "options": [
           {
             "key": "TRUE",
-            "next_question_to_ask": -1
+            "text": "True",
+            "next_question_to_ask": 5
           },
           {
             "key": "FALSE",
-            "next_question_to_ask": -1
-          },
-          {
-            "key": "NEXT_QUESTION",
+            "text": "False",
             "next_question_to_ask": 5
           }
         ]
@@ -47,6 +48,7 @@
         "options": [
           {
             "key": "NEXT_QUESTION",
+            "text": "",
             "next_question_to_ask": 5
           }
         ]
@@ -57,14 +59,12 @@
         "options": [
           {
             "key": "TRUE",
+            "text": "True",
             "next_question_to_ask": 5
           },
           {
             "key": "FALSE",
-            "next_question_to_ask": -1
-          },
-          {
-            "key": "NEXT_QUESTION",
+            "text": "False",
             "next_question_to_ask": -1
           }
         ]
@@ -75,6 +75,7 @@
         "options": [
           {
             "key": "NEXT_QUESTION",
+            "text": "",
             "next_question_to_ask": -1
           }
         ]
@@ -92,6 +93,7 @@
         "options": [
           {
             "key": "NEXT_QUESTION",
+            "text": "",
             "next_question_to_ask": -1
           }
         ]
@@ -109,6 +111,7 @@
         "options": [
           {
             "key": "NEXT_QUESTION",
+            "text": "",
             "next_question_to_ask": -1
           }
         ]
@@ -126,6 +129,7 @@
         "options": [
           {
             "key": "NEXT_QUESTION",
+            "text": "",
             "next_question_to_ask": -1
           }
         ]

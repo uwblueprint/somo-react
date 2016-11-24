@@ -8,7 +8,7 @@
     "react/prefer-stateless-function": 0,
     "import/extensions": 0,
     "import/prefer-default-export": 0,
-    "import/no-extraneous-dependencies": ["error", {
+    "import/no-extraneous-dependencies": [2, {
       devDependencies: [
         "test/**",
         "webpack.config.js",

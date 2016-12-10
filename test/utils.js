@@ -9,6 +9,6 @@ export const mockSurveysMetadata = Object.keys(mockSurveys).reduce(
       ...surveysMetadataSoFar,
       [curSurveyKey]: {
         name: mockSurveys[curSurveyKey].name,
-        is_sent: mockSurveys[curSurveyKey].is_sent,
+        status: mockSurveys[curSurveyKey].status,
       },
     }), {});

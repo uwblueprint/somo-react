@@ -20,8 +20,7 @@ export const NEW_SURVEY = Object.freeze({
   body: {
     name: 'Untitled survey',
     intro: '',
-    is_sent: false,
-    first_question_id: 1,
+    status: 'DRAFT',
     questions: {
       1: {
         text: 'Untitled question',
@@ -36,3 +35,8 @@ export const NEW_SURVEY = Object.freeze({
     },
   },
 });
+
+// Used to indicate the status of a survey.
+export const DRAFT_SURVEY = 'DRAFT';
+export const PUBLISHED_SURVEY = 'PUBLISHED';
+export const SENT_SURVEY = 'SENT';

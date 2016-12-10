@@ -22,8 +22,9 @@ class AllSurveysContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
+  draftSurveys: getDraftSurveysMetadata(state),
+  publishedSurveys: getPublishedSurveysMetadata(state),
   sentSurveys: getSentSurveysMetadata(state),
-  unsentSurveys: getUnsentSurveysMetadata(state),
 });
 
 const mapDispatchToProps = dispatch => ({

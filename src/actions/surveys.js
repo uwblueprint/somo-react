@@ -116,7 +116,7 @@ export function saveSurvey() {
     // changed in the survey.
     dispatch(addSurveyMetadata(id, Immutable.fromJS({
       name: surveys.getIn(['survey', 'body', 'name']),
-      is_sent: surveys.getIn(['survey', 'body', 'is_sent']),
+      status: surveys.getIn(['survey', 'body', 'status']),
     })));
   };
 }

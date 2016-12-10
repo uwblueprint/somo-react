@@ -2,8 +2,7 @@
   "1": {
     "name": "First survey title",
     "intro": "First survey introduction",
-    "is_sent": false,
-    "first_question_id": 1,
+    "status": "DRAFT",
     "questions": {
       "1": {
         "text": "Please select an option for this question.",
@@ -85,7 +84,7 @@
   "2": {
     "name": "Second survey title",
     "intro": "Second survey introduction",
-    "is_sent": true,
+    "status": "PUBLISHED",
     "questions": {
       "1": {
         "text": "This is just a short answer question 6",
@@ -103,7 +102,7 @@
   "3": {
     "name": "Third survey title",
     "intro": "Third survey introduction",
-    "is_sent": true,
+    "status": "SENT",
     "questions": {
       "1": {
         "text": "This is just a short answer question 7",
@@ -121,7 +120,7 @@
   "4": {
     "name": "Fourth survey title",
     "intro": "Fourth survey introduction",
-    "is_sent": false,
+    "status": "SENT",
     "questions": {
       "1": {
         "text": "This is just a short answer question 8",

@@ -32,24 +32,25 @@
 
 ### Style Guide
 1. Indentation
-  * Use 2 spaces.
-  * There should be no use of tabs.
+   * Use 2 spaces.
+   * There should be no use of tabs.
 2. Spacing
-  * There should be no trailing whitespace.
-  * There should be no empty new lines at the end of a file.
+   * There should be no trailing whitespace.
+   * There should be no empty new lines at the end of a file.
 3. Line length
-  * The maximum characters per line should be 100.
+   * The maximum characters per line should be 100.
 4. Imports
-  * Separate the plugin imports from our class/function imports from other language (i.e. JSON) imports using 1 line.
-  * An import must be on 1 line, even if it is longer than 100 characters.
-  * See [here](src/App.jsx) for example.
+   * Separate the plugin imports from our class/function imports from other language (i.e. JSON) imports using 1 line.
+   * An import must be on 1 line, even if it is longer than 100 characters.
+   * See [here](src/App.jsx) for example.
 5. Comments
-  * Use `// This is a comment.` instead of `/* This is a comment. */`.
-  * They must have correct grammer and sentence structure.
+   * Use `// This is a comment.` instead of `/* This is a comment. */`.
+   * They must have correct grammer and sentence structure.
 6. Strings
-  * Use single quotes instead of double quotes.
+   * Use single quotes instead of double quotes.
 7. Use ES6 over ES5 when possible.
-
+8. The redux actions should be dispatched as a JS object and the reducers must change that data to an Immutable object when storing it in the redux state.
+   * This makes more sense because only the data that is stored in the redux state needs to be immutable; not the actions.
 
 ### Contributing Guidelines
 * Create an issue for the task you're going to work on if it does not already exist [here](https://github.com/uwblueprint/somo/issues).

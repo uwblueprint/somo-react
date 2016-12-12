@@ -3,7 +3,7 @@ import PureComponent from 'react-pure-render/component';
 
 export default class SelectedSurveyPage extends PureComponent {
   static propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     survey: PropTypes.object.isRequired,
     fetchSurvey: PropTypes.func.isRequired,
     saveSurvey: PropTypes.func.isRequired,

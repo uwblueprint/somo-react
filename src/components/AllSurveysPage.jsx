@@ -7,8 +7,9 @@ import { formPath } from 'utils';
 
 export default class AllSurveysPage extends PureComponent {
   static propTypes = {
+    draftSurveys: PropTypes.instanceOf(Immutable.Map).isRequired,
+    publishedSurveys: PropTypes.instanceOf(Immutable.Map).isRequired,
     sentSurveys: PropTypes.instanceOf(Immutable.Map).isRequired,
-    unsentSurveys: PropTypes.instanceOf(Immutable.Map).isRequired,
     fetchSurveysMetadata: PropTypes.func.isRequired,
   };
 
@@ -21,10 +22,11 @@ export default class AllSurveysPage extends PureComponent {
   }
 
   render() {
-    const { sentSurveys, unsentSurveys } = this.props;
+    const { draftSurveys, publishedSurveys, sentSurveys } = this.props;
     const { router } = this.context;
+    console.log(draftSurveys);
+    console.log(publishedSurveys);
     console.log(sentSurveys);
-    console.log(unsentSurveys);
     return (
       <div>
         <div>

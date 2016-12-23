@@ -3,6 +3,7 @@ import PureComponent from 'react-pure-render/component';
 
 import Footer from 'components/Footer';
 import Header from 'components/Header';
+import { HEADER_HEIGHT, FOOTER_HEIGHT } from 'constants';
 
 export default class AppStructure extends PureComponent {
   static propTypes = {
@@ -26,7 +27,6 @@ const styles = {
   app: {
     backgroundColor: 'rgba(0,0,0,0.05)',
     fontFamily: 'Helvetica',
-    padding: '16px',
-    margin: '8px 0',
+    height: `calc(100vh - ${HEADER_HEIGHT} - ${FOOTER_HEIGHT})`,
   },
 };

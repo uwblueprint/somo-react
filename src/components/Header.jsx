@@ -2,6 +2,8 @@ import Radium from 'radium';
 import React from 'react';
 import PureComponent from 'react-pure-render/component';
 
+import { HEADER_HEIGHT } from 'constants';
+
 @Radium
 export default class Header extends PureComponent {
   render() {
@@ -15,7 +17,7 @@ export default class Header extends PureComponent {
 
 const styles = {
   header: {
-    height: '56px',
+    height: HEADER_HEIGHT,
     backgroundColor: 'rgba(0,0,0,0.05)',
     fontFamily: 'Helvetica',
     fontSize: '16px',

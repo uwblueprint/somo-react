@@ -3,8 +3,8 @@
     "name": "First survey title",
     "description": "First survey description",
     "status": "DRAFT",
-    "questions": {
-      "1": {
+    "questions": [
+      {
         "text": "Please select an option for this question.",
         "type": "MULTIPLE_CHOICE",
         "default_next_question_id": -1,
@@ -26,7 +26,7 @@
           }
         ]
       },
-      "2": {
+      {
         "text": "Are you an alien?",
         "type": "TRUE_FALSE",
         "default_next_question_id": -1,
@@ -43,13 +43,13 @@
           }
         ]
       },
-      "3": {
+      {
         "text": "This is a short answer question?",
         "type": "SHORT_ANSWER",
         "default_next_question_id": 5,
         "options": []
       },
-      "4": {
+      {
         "text": "Answering true to this question will take you to question 5 and false to the end.",
         "type": "TRUE_FALSE",
         "default_next_question_id": -1,
@@ -66,51 +66,51 @@
           }
         ]
       },
-      "5": {
+      {
         "text": "This is the last question",
         "type": "SHORT_ANSWER",
         "default_next_question_id": -1,
         "options": []
       }
-    }
+    ]
   },
   "2": {
     "name": "Second survey title",
     "description": "Second survey description",
     "status": "PUBLISHED",
-    "questions": {
-      "1": {
+    "questions": [
+      {
         "text": "This is just a short answer question 6",
         "type": "SHORT_ANSWER",
         "default_next_question_id": -1,
         "options": []
       }
-    }
+    ]
   },
   "3": {
     "name": "Third survey title",
     "description": "Third survey description",
     "status": "SENT",
-    "questions": {
-      "1": {
+    "questions": [
+      {
         "text": "This is just a short answer question 7",
         "type": "SHORT_ANSWER",
         "default_next_question_id": -1,
         "options": []
       }
-    }
+    ]
   },
   "4": {
     "name": "Fourth survey title",
     "description": "Fourth survey description",
     "status": "SENT",
-    "questions": {
-      "1": {
+    "questions": [
+      {
         "text": "This is just a short answer question 8",
         "type": "SHORT_ANSWER",
         "default_next_question_id": -1,
         "options": []
       }
-    }
+    ]
   }
 }

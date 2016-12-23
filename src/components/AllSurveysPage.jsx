@@ -17,7 +17,7 @@ export default class AllSurveysPage extends PureComponent {
     router: React.PropTypes.object.isRequired,
   };
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchSurveysMetadata();
   }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import PureComponent from 'react-pure-render/component';
 
+import { FOOTER_HEIGHT } from 'constants';
+
 export default class Footer extends PureComponent {
   render() {
     return (
@@ -13,7 +15,7 @@ export default class Footer extends PureComponent {
 
 const styles = {
   footer: {
-    height: '48px',
+    height: FOOTER_HEIGHT,
     position: 'absolute',
     bottom: '0',
     overflow: 'hidden',

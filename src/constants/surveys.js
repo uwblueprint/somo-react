@@ -12,16 +12,16 @@ export const NEW_SURVEY_ID = -1;
 // The default survey object for a new survey.
 export const NEW_SURVEY_BODY = Object.freeze({
   name: 'Untitled survey',
-  description: '',
+  description: 'Untitled survey description',
   status: 'DRAFT',
-  questions: {
-    1: {
+  questions: [
+    {
       text: 'Untitled question',
       type: QUESTION_TYPE.SHORT_ANSWER,
       default_next_question_id: -1,
       options: [],
     },
-  },
+  ],
 });
 
 // Used to indicate the status of a survey.

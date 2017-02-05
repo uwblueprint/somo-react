@@ -72,6 +72,7 @@
 * [immutable-js](https://facebook.github.io/immutable-js)
 * [Mocha](https://mochajs.org)
 * [Chai](http://chaijs.com)
+* [Enzyme](http://airbnb.io/enzyme/)
 
 ### Useful Resources
 * [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)

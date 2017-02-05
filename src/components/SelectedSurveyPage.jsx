@@ -26,6 +26,19 @@ export default class SelectedSurveyPage extends PureComponent {
     fetchSurvey(id);
   }
 
+  // TODO(ayushbhagat): Check for cycles.
+  getValidNextQuestionOptions = (id) => {
+    const { survey } = this.props;
+    const questions = survey.getIn(['body', 'questions']);
+    const options = [];
+    for (let questionId = 0; questionId < questions.size; questionId++) {
+      if (questionId !== id) {
+        options.push(questionId);
+      }
+    }
+    return options;
+  }
+
   renderMetadata() {
     const { survey } = this.props;
     const name = survey.getIn(['body', 'name']);
@@ -54,6 +67,7 @@ export default class SelectedSurveyPage extends PureComponent {
               question={question}
               isFocused={this.state.questionInFocus === questionId}
               setQuestionInFocus={() => this.setState({ questionInFocus: questionId })}
+              nextQuestionOptions={this.getValidNextQuestionOptions(questionId)}
             />
           )).toJS()
         }
@@ -73,9 +87,7 @@ export default class SelectedSurveyPage extends PureComponent {
           <div onClick={() => saveSurvey()}>
             Click here to save survey.
           </div> */ }
-
           { this.renderMetadata() }
-
           { this.renderQuestions() }
         </div>
       </div>

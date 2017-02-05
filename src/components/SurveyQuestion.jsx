@@ -3,14 +3,16 @@ import PureComponent from 'react-pure-render/component';
 import Immutable from 'immutable';
 
 import Dropdown from 'components/Dropdown';
+import MultipleChoiceQuestion from 'components/MultipleChoiceQuestion';
 import { QUESTION_TYPE, MARGIN_BETWEEN_QUESTIONS, SELECTED_SURVEY_BODY_PADDING } from 'constants';
 
 export default class SurveyQuestion extends PureComponent {
   static propTypes = {
-    id: PropTypes.number.isRequired,  // Maybe it doesn't need id? I don't know yet.
+    id: PropTypes.number.isRequired,
     question: PropTypes.instanceOf(Immutable.Map).isRequired,
     isFocused: PropTypes.bool.isRequired,
     setQuestionInFocus: PropTypes.func.isRequired,
+    nextQuestionOptions: PropTypes.array.isRequired,
   };
 
   renderQuestionTypeDropdown() {
@@ -36,6 +38,26 @@ export default class SurveyQuestion extends PureComponent {
     );
   }
 
+  renderSpecificQuestion() {
+    const { id, question, nextQuestionOptions } = this.props;
+    switch (question.get('type')) {
+      case QUESTION_TYPE.SHORT_ANSWER:
+        return (<div>Short Answer</div>);
+      case QUESTION_TYPE.MULTIPLE_CHOICE:
+        return (
+          <MultipleChoiceQuestion
+            id={id}
+            question={question}
+            nextQuestionOptions={nextQuestionOptions}
+          />
+        );
+      case QUESTION_TYPE.TRUE_FALSE:
+        return (<div>True False</div>);
+      default:
+        return (<div>Nothing</div>);
+    }
+  }
+
   render() {
     const { id, question, isFocused, setQuestionInFocus } = this.props;
     console.log(id);
@@ -50,9 +72,7 @@ export default class SurveyQuestion extends PureComponent {
         onClick={() => setQuestionInFocus()}
       >
         { isFocused && this.renderQuestionTypeDropdown() }
-        <div>
-          Ayush
-        </div>
+        { this.renderSpecificQuestion() }
       </div>
     );
   }
@@ -60,9 +80,7 @@ export default class SurveyQuestion extends PureComponent {
 
 const styles = {
   questionContainer: {
-    paddingTop: MARGIN_BETWEEN_QUESTIONS,
-    paddingBottom: MARGIN_BETWEEN_QUESTIONS,
-    paddingLeft: SELECTED_SURVEY_BODY_PADDING,
+    padding: `${MARGIN_BETWEEN_QUESTIONS} ${SELECTED_SURVEY_BODY_PADDING}`,
   },
   onClickQuestion: {
     border: '1px solid red',

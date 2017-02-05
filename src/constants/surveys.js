@@ -1,8 +1,8 @@
 // The different types of questions that can be asked.
 export const QUESTION_TYPE = Object.freeze({
   SHORT_ANSWER: 'SHORT_ANSWER',
-  TRUE_FALSE: 'TRUE_FALSE',
   MULTIPLE_CHOICE: 'MULTIPLE_CHOICE',
+  TRUE_FALSE: 'TRUE_FALSE',
   CHECKBOX: 'CHECKBOX',
 });
 

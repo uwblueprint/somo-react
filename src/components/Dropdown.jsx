@@ -25,7 +25,6 @@ export default class Dropdown extends PureComponent {
         style={{
           ...styles.container,
           ...(!Radium.getState(this.state, DROPDOWN_KEY, ':hover') ? {
-            borderBottom: dropdownBorder,
             borderBottomLeftRadius: dropdownBorderRadius,
             borderBottomRightRadius: dropdownBorderRadius,
           } : {}),
@@ -70,9 +69,7 @@ const styles = {
     display: 'inline-block',
     background: dropdownBackground,
     fontSize: '14px',
-    borderLeft: dropdownBorder,
-    borderRight: dropdownBorder,
-    borderTop: dropdownBorder,
+    border: dropdownBorder,
     borderTopLeftRadius: dropdownBorderRadius,
     borderTopRightRadius: dropdownBorderRadius,
     cursor: 'pointer',

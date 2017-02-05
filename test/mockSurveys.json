@@ -12,17 +12,17 @@
           {
             "key": "A",
             "text": "This is option a",
-            "next_question_id": 2
+            "next_question_id": 1
           },
           {
             "key": "B",
             "text": "This is option b",
-            "next_question_id": 3
+            "next_question_id": 2
           },
           {
             "key": "C",
             "text": "This is option c",
-            "next_question_id": 4
+            "next_question_id": 3
           }
         ]
       },
@@ -84,6 +84,28 @@
         "type": "SHORT_ANSWER",
         "default_next_question_id": -1,
         "options": []
+      },
+      {
+        "text": "Please select an option for this question.",
+        "type": "MULTIPLE_CHOICE",
+        "default_next_question_id": 0,
+        "options": [
+          {
+            "key": "A",
+            "text": "This is option a",
+            "next_question_id": -1
+          },
+          {
+            "key": "B",
+            "text": "This is option b",
+            "next_question_id": -1
+          },
+          {
+            "key": "C",
+            "text": "This is option c",
+            "next_question_id": -1
+          }
+        ]
       }
     ]
   },

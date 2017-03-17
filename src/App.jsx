@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
-import PureComponent from 'react-pure-render/component';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 

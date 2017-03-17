@@ -1,6 +1,5 @@
+import React, { PureComponent } from 'react';
 import Radium from 'radium';
-import React from 'react';
-import PureComponent from 'react-pure-render/component';
 
 import { HEADER_HEIGHT } from 'constants';
 

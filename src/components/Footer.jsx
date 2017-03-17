@@ -1,5 +1,4 @@
-import React from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, { PureComponent } from 'react';
 
 import { FOOTER_HEIGHT } from 'constants';
 

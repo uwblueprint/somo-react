@@ -1,5 +1,4 @@
-import React, { PropTypes } from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, { PureComponent, PropTypes } from 'react';
 
 import Footer from 'components/Footer';
 import Header from 'components/Header';

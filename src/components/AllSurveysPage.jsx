@@ -1,6 +1,5 @@
 import Immutable from 'immutable';
-import React, { PropTypes } from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, { PureComponent, PropTypes } from 'react';
 
 import { ALL_SURVEYS_PAGE, NEW_SURVEY_PAGE } from 'constants';
 import { formPath } from 'utils';

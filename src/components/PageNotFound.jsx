@@ -1,5 +1,4 @@
-import React from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, { PureComponent } from 'react';
 
 export default class PageNotFound extends PureComponent {
   render() {

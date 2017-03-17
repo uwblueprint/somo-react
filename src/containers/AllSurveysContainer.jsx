@@ -1,7 +1,6 @@
-import Immutable from 'immutable';
-import React, { PropTypes } from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import Immutable from 'immutable';
 
 import { fetchSurveysMetadata } from 'actions';
 import AllSurveysPage from 'components/AllSurveysPage';

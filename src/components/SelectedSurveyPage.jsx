@@ -1,5 +1,4 @@
-import React, { PropTypes } from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, { PureComponent, PropTypes } from 'react';
 import Immutable from 'immutable';
 
 import SurveyQuestion from 'components/SurveyQuestion';

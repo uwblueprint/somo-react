@@ -9,48 +9,64 @@ module.exports = {
     './src/index.js',
   ],
   output: {
-    path: path.join(__dirname, 'build'),
-    publicPath: '/assets',
     filename: 'bundle.js',
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/assets/',
   },
   module: {
-    preLoaders: [
+    rules: [
       {
+        enforce: 'pre',
         test: /.jsx?$/,
-        loader: 'eslint',
+        use: [
+          {
+            loader: 'eslint-loader',
+            options: {
+              emitWarning: true,
+              emitError: true,
+              failOnWarning: true,
+              failOnError: true,
+            },
+          },
+        ],
         exclude: /node_modules/,
       },
-    ],
-    loaders: [
       {
         test: /.jsx?$/,
-        loader: 'babel',
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
         exclude: /node_modules/,
-      },
-      {
-        test: /.json$/,
-        loader: 'json',
       },
     ],
   },
   resolve: {
-    root: path.join(__dirname, 'src'),
-    extensions: ['', '.js', '.jsx'],
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules',
+    ],
+    extensions: ['.js', '.json', '.jsx'],
   },
-  eslint: {
-    emitWarning: true,
-    emitError: true,
-    failOnWarning: true,
-    failOnError: true,
+  node: {
+    // When you try to import a file or directory named 'constants' using its absolute path, it
+    // will not import the user created 'constants' file or directory. Instead, it will import
+    // node_modules/constants-browserify/constants.json, which is a node.js built-in module, and
+    // node.js built-in modules have a higher priority than any user modules. So this is a
+    // workaround that customizes the node.js environment. See
+    // https://github.com/webpack/webpack/issues/4159 from more details.
+    constants: false,
   },
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
-    colors: true,
     hot: true,
     inline: false,
+    contentBase: path.join(__dirname, 'src'),
+    publicPath: '/assets/',
     historyApiFallback: true,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
   ],
 };

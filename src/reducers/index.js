@@ -1,1 +1,1 @@
-export * from 'reducers/surveys.js';
+export * from 'reducers/surveys';

@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Front-end for the Somo project. Allows users to create, edit and send surveys using SMS.",
   "scripts": {
+    "build": "webpack --display-error-details",
+    "clean": "rm -rf dist",
     "lint": "eslint src/ test/ webpack.config.js webpack.config.test.js",
     "start": "webpack-dev-server --progress",
     "test": "mocha-webpack --webpack-config webpack.config.test.js --recursive test"
@@ -41,7 +43,7 @@
     "chai-immutable": "^1.6.0",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^13.0.0",
-    "eslint-import-resolver-webpack": "^0.7.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-loader": "^1.6.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
@@ -50,7 +52,7 @@
     "mocha-webpack": "^0.7.0",
     "react-hot-loader": "^3.0.0-beta.6",
     "redux-mock-store": "^1.2.1",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }

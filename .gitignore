@@ -1,5 +1,5 @@
 .DS_Store
-*.swp
+*.sw[p|o]
 node_modules
 npm-debug.log
 .tmp
